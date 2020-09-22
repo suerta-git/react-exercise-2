@@ -6,14 +6,17 @@ export default class GoodItem extends React.Component {
     return (
       <li id={this.props.name}>
         <h3>{this.props.name}</h3>
-        <img src={PRODUCT_IMG} alt={this.props.name} />
-        <p>{this.props.price}</p>
-        <button
-          className="btn btn-primary no-radius"
-          onClick={this.props.cartHandler}
-        >
-          add to cart
-        </button>
+        <img src={PRODUCT_IMG} alt={this.props.name} className="image-size" />
+        <form>
+          <p>{this.props.price}</p>
+          <button
+            type="button"
+            className="btn btn-primary customize-button"
+            onClick={this.props.cartHandler}
+          >
+            add to cart
+          </button>
+        </form>
       </li>
     );
   }

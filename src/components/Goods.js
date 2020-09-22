@@ -1,5 +1,6 @@
 import React from 'react';
 import Brand from './Brand';
+import './Goods.scss';
 
 export default class Goods extends React.Component {
   constructor(props) {
@@ -25,10 +26,10 @@ export default class Goods extends React.Component {
 
   render() {
     if (this.state.goods.length === 0) {
-      return <section></section>;
+      return <section id="goods"></section>;
     }
     return (
-      <section>
+      <section id="goods">
         {this.state.goods.map((item) => (
           <Brand
             brandName={item.brandName}

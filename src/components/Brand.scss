@@ -1,0 +1,41 @@
+@import '../styles/variables.scss';
+
+.brand {
+    margin: $base-margin;
+}
+
+.brand h2 {
+    font-weight: bold;
+    font-size: 1.3em;
+    margin: $base-margin 0;
+}
+
+.brand ul {
+    display: flex;
+}
+
+.brand h3 {
+    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: $base-margin;
+}
+
+.brand li {
+    margin-right: 30px;
+}
+
+.brand li img {
+    margin-bottom: 10px;
+}
+
+.brand li form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.customize-button {
+    border-radius: 0;
+    padding: 2px 10px;
+    font-size: 0.6em;
+}
