@@ -1,0 +1,12 @@
+@import '../styles/variables.scss';
+
+#cart {
+    margin-right: $base-margin;
+    display: flex;
+    align-items: center;
+}
+
+#cart .white {
+    color: white;
+    margin-right: 2px;
+}
