@@ -41,4 +41,32 @@ export default class Goods extends React.Component {
       </section>
     );
   }
+
+  componentDidMount = async () => {
+    try {
+      const response = await fetch('http://localhost:3000/products');
+      const reception = await response.json();
+      this.receiveProducts(reception);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  receiveProducts = (reception) => {
+    const goods = [];
+    reception.forEach((item) => {
+      const theBrand = goods.find((b) => b.brandName === item.category);
+      if (theBrand !== undefined) {
+        theBrand.products.push({ name: item.name, price: item.price });
+      } else {
+        goods.push({
+          brandName: item.category,
+          products: [{ name: item.name, price: item.price }],
+        });
+      }
+    });
+    this.setState({
+      goods: goods,
+    });
+  };
 }
