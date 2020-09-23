@@ -6,28 +6,11 @@ export default class Goods extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      goods: [
-        {
-          brandName: 'iPhone',
-          products: [
-            {
-              name: 'iPhone11',
-              price: '￥5999',
-            },
-            {
-              name: 'iPhoneXS',
-              price: '￥5399',
-            },
-          ],
-        },
-      ],
+      goods: [],
     };
   }
 
   render() {
-    if (this.state.goods.length === 0) {
-      return <section id="goods"></section>;
-    }
     return (
       <section id="goods">
         {this.state.goods.map((item) => (
